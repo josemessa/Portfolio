@@ -1,0 +1,52 @@
+#nav-bar {
+  position: fixed;
+  z-index: 2;
+  display: flex; 
+  gap: 2rem;
+  align-items: center;
+ 
+  left: -50%;
+  animation: navbar 2s forwards;
+  background-color: var(--main-color);
+  padding-right: 2rem;
+  padding-top: 2rem;
+  border-radius: 5px;
+
+}
+#nav-bar a {
+  font-family: var(--title-font);
+  font-size: var(--small-fontsize);
+  text-wrap: nowrap;
+  cursor: pointer;
+  transition: transform 0.3s; 
+}
+#nav-bar a:hover {
+  transform: scale(1.2);
+}
+#nav-bar .linea-navbar {
+  width: 300px;
+  height: 2px;
+  background-color: black;
+}
+
+@keyframes navbar {
+  from {
+    left: -200;
+  }
+  to {
+    left: -7%;
+  }
+}
+
+@media(max-width: 500px) {
+  #nav-bar {
+   display: none;
+  }
+  #nav-bar a {
+    text-wrap: nowrap;
+    cursor: pointer;
+  }
+  #nav-bar .linea-navbar {
+    display: none;
+  }
+}

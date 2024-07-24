@@ -1,0 +1,70 @@
+/* importaciones estilos componentes */
+@import "./Components/Contact-bar/contact-bar.css";
+@import "./Components/NavBar/NavBar.css";
+@import "./Components/LogoPhrase/LogoPhrase.css";
+@import "./Components/Index/IndexComponent.css";
+@import "./utils/FadeInComponent/FadeInOut.css";
+
+/* importaciones estilos paginas */
+ @import "./pages/AboutMePage/AboutMePage.css";
+ @import "./pages/SkillsPage/SkillsPage.css";
+ @import "./pages/ProjectsPage/ProjectsPage.css";
+
+
+/* fuentes */
+@font-face {
+  font-family: "IMPACT";
+  src: url("./assets/fonts/impact.ttf") format("truetype");
+}
+@font-face {
+  font-family: "cascadia";
+  src: url("./assets/fonts/Cascadia.ttf") format("truetype");
+}
+#root {
+  /* flex:1; */
+  background-color: rgb(245, 245, 245);
+  font-family: var(--main-font);
+  --title-font: "IMPACT";
+  --main-font:"cascadia"; 
+  --main-color:  rgb(245, 245, 245);
+  --secondary-color:rgb(13, 13, 13);
+  --small-fontsize: 24px;
+  --medium-fontsize:32px;
+  --big-fontsize:38px;
+  
+}
+
+
+h3{
+  margin-top: 0;
+  font-family: var(--title-font);
+  font-size: 70px;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer !important;
+}
+
+body {
+  margin: 0;
+ flex:1;
+  
+}
+p{
+  margin: 0;
+}
+
+@media(max-width: 500px){
+  h3{
+    margin-bottom: 3rem ;
+    font-family: var(--title-font);
+    font-size: 50px;
+   
+    
+  }
+}

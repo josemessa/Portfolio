@@ -1,0 +1,129 @@
+.contact-element {
+  display: flex;
+  position: fixed; 
+  flex-direction: column;
+  right: 1.5%;
+  align-items: center;
+  gap: 1rem;
+  animation: contact 2s forwards;
+  top: -200%;
+
+  z-index: 2;
+}
+
+@keyframes contact {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes contactmovil {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+
+.contact-bar {
+  display: flex;
+  flex-direction: column;
+  font-family: "IMPACT";
+  z-index: 1;
+
+  padding: 0.5rem;
+  gap: 1rem;
+  border-radius: 5px;
+  background-color:rgba(255, 255, 255, 0.387);
+  backdrop-filter: blur(5px);
+  
+
+}
+
+.linea-contact-bar {
+  width: 2px;
+  height: 35vh;
+  
+}
+
+.contact-bar a {
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  border-radius: 10px;
+  transition: 0.5s;
+  &:hover{
+    transform: scale(1.5);
+  }
+}
+
+.contact-bar a svg {
+  fill: var(--text-color);
+  height: 2.5rem;
+  
+  
+}
+
+.contact-bar a p {
+  display: flex;
+  align-items: center;
+  text-align: right;
+  opacity: 0;
+  transition: transform 500ms ease-in-out, opacity 500ms;
+  white-space: nowrap;
+  margin-left: 2rem;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.387);
+  padding: 0.2rem;
+  border-radius: 2px;
+
+
+}
+
+.contact-bar a:hover p {
+  opacity: 1;
+  transform: translateX(-190%);
+}
+
+.contact-bar > div:nth-child(1) > a:hover > p {
+  opacity: 1;
+  transform: translateX(-130%);
+}
+
+.contact-bar > div:nth-child(3) > a:hover > p {
+  opacity: 1;
+  transform: translateX(-200%);
+}
+
+@media (max-width: 500px) {
+  .contact-element{
+    display: none;
+  }
+  /* .contact-element {
+    animation: contactmovil 2s forwards;
+    left: -85%
+  }
+  .contact-bar{
+    background-color: unset ;
+    backdrop-filter: none;
+  }
+  .linea-contact-bar {
+    display: none;
+  }
+  
+  .contact-bar a p {
+    display: none;
+    
+  }
+  .contact-bar a{
+background-color: unset;
+    border-radius:10px;
+  } */
+}

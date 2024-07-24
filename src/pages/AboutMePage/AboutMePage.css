@@ -1,0 +1,93 @@
+#about-me-container {
+display: flex;
+    min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+ 
+  }
+  #about-me{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas */
+    align-items: center;
+  }
+  #foto-grid-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+  }
+  
+#passions-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas para las imágenes */
+
+    gap: 20px;    
+    width: 60%;
+    height: 100%;
+
+  }
+  
+  #crime, #games, #internet {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+  }
+  
+  #crime {
+    background-image: url(../../assets/Imagenes/crime.webp);
+  }
+  
+  #games {
+    background-image: url(../../assets/Imagenes/games.webp);
+  }
+  
+  #internet {
+    background-image: url(../../assets/Imagenes/internet.webp);
+    grid-column: span 2; 
+  }
+  
+  #description-container {
+    height: 70%;
+    display: flex;
+    justify-content: center;
+
+
+   
+    #description {
+      width: 80%;
+      margin-right: 7rem;
+    }
+  }
+  
+  
+  @media (max-width: 500px) {
+    #about-me{
+    
+     grid-template-columns: none;
+    }
+  
+  #passions-container {
+    width: 80%;
+    #crime, #games, #internet {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      height: 10rem;
+    }
+    }
+      
+  #description-container {
+    min-height: 100vh;
+    text-align: center;
+    
+    h3{
+    text-align: center;
+      margin-top: 3rem;
+    }
+   
+    #description {
+      width: 70%;
+      margin:0;
+    }
+  }
+  }
+  

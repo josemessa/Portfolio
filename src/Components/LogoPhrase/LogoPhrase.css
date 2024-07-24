@@ -1,0 +1,53 @@
+#logo-phrase {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  position: absolute;
+  bottom: 5%;
+  font-family: var(--main-font);
+  font-size: 16px;
+  left: 5%;
+ 
+  align-items: center;
+  .logo {
+    width: 5rem;
+    height: auto;
+  }
+  p {
+    max-width: 1000%;
+  }
+  #presentation-movil {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+ #logo-phrase-container{
+  display: flex;
+  justify-content: center;
+ }
+  #logo-phrase {
+   display: flex;
+   gap: 4rem;
+   bottom: 20%;
+    .logo {
+      width: 7rem;
+      text-align: center;
+      margin-left: 30%;
+      fill: var(--main-color)
+    }
+    #phrase {
+      display: none;
+    }
+
+    #presentation-movil {
+      display: flex;
+      flex-direction: column;
+      color: var(--main-color);
+      /* color: var(--main-color); */
+      text-wrap: nowrap;
+      font-size: var(--small-fontsize);
+      span {
+        font-size: var(--medium-fontsize);
+      }
+    }
+  }
+}
